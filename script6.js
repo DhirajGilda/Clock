@@ -48,6 +48,11 @@ function setTime(){
 const scale = (num, in_min, in_max, out_min, out_max) => {
     return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
-
+function play() {
+    var audio = new Audio('clock-ticking-2.mp3');
+    audio.play();
+    }
+play()
+setInterval(play, 1000)
 setTime()
 setInterval(setTime,1000)
